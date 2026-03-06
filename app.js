@@ -9,17 +9,17 @@ function verificarChute(){
     console.log("Gerei um numero aleatorio que é: "+ numeroSecreto);
     if(chute == numeroSecreto){
         console.log(`Acertou!\nChute = ${chute}\nNumero secreto = ${numeroSecreto}`);
-        exibirTexto("h1",`Acertou!\nChute = ${chute}\nNumero secreto = ${numeroSecreto}`);
+        exibirTexto("h1",`Acertou!`);
         exibirTexto("p",`Você descobriu o numero secreto com ${tentativas} ${tentativas==1? 'tentativa' : 'tentativas'}`);
         document.getElementById("reiniciar").removeAttribute("disabled");
     }else if(chute > numeroSecreto){
         console.log(`Errou!\nChute = ${chute}\nNumero secreto = ${numeroSecreto}`);
-        exibirTexto("p",`Errou!\nChute = ${chute}\nNumero secreto é menor que o chute`);
+        exibirTexto("p",`Errou, tente novamente, o numero secreto é menor que o chute`);
         tentativas++;
         limparCampo();
     }else if(chute < numeroSecreto){
         console.log(`Errou!\nChute = ${chute}\nNumero secreto = ${numeroSecreto}`);
-        exibirTexto("p",`Errou!\nChute = ${chute}\nNumero secreto é maior que o chute`);
+        exibirTexto("p",`Errou, tente novamente, o numero secreto é maior que o chute`);
         tentativas++;
         limparCampo();
     }
